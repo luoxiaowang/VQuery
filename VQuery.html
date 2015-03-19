@@ -2,19 +2,56 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <script src="vQuery.js" type="text/javascript"></script>
     <script type="text/javascript">
-        new VQuery(function(){
+        /*new VQuery(function(){
             alert(1);
         });
 
         new VQuery(function(){
             alert(2);
+        })*/
+
+        $(function(){
+            /*$('#btn1').click(function(){
+                alert(1);
+            });
+
+            $('.btn2').click(function(){
+                alert(2);
+            });
+
+            $('input').click(function(){
+                alert(3);
+            });*/
+
+            $("#showBtn").click(function(){
+                $("#div1").show();
+            });
+
+            $("#hiddenBtn").click(function(){
+                $("#div1").hide();
+            });
+
+            $("#div1").hover(function(){
+                $(this).css("backgroundColor","yellow");
+            },function(){
+                alert($(this).css("backgroundColor"));
+            })
         })
+
     </script>
 </head>
 <body>
+<input id="btn1" type="button" value="aaa">
+<input class="btn2" type="button" value="bbb">
+<input class="btn2" type="button" value="ccc">
+<input type="button" value="ccc">
 
+<input id="showBtn" type="button" value="显示">
+<input id="hiddenBtn" type="button" value="隐藏">
+<div id="div1" style="height: 100px;width:100px;background-color: red;display: none"></div>
 </body>
 </html>
