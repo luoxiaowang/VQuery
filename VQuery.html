@@ -27,7 +27,7 @@
                 alert(3);
             });*/
 
-            $("#showBtn").click(function(){
+            /*$("#showBtn").click(function(){
                 $("#div1").show();
             });
 
@@ -39,16 +39,56 @@
                 $(this).css("backgroundColor","yellow");
             },function(){
                 alert($(this).css("backgroundColor"));
-            })
+            })*/
+
+            /*$("input").toggle(function(){
+                $("#div1").show();
+            },function(){
+                $("#div1").hide();
+            })*/
+
+            /*$("#btn1").click(function(){
+                alert($("#showBtn").attr('value'));
+            });
+            $(".btn2").click(function(){
+                $("#showBtn").attr('value',"test");
+            });
+
+            alert($(".btn2").eq(1).attr('value'));*/
+
+            /*$('#div2').find("input").css("color","red");*/
+
+            /*$("input").click(function(){
+                alert($(this).index());
+            })*/
+
+            /*$("input").click(function(){
+                $(this).css({width:"200px",color:"yellow"}).css("background-color","green");
+            })*/
+
+            /*$(document).bind('contextmenu',function(){
+               return false;
+            });*/
+
+            $().extend("size",function(){
+                return this.elements.length;
+            });
+
+            alert($("input").size());
+
         })
 
     </script>
 </head>
 <body>
+
+<div id="div2">
 <input id="btn1" type="button" value="aaa">
 <input class="btn2" type="button" value="bbb">
 <input class="btn2" type="button" value="ccc">
 <input type="button" value="ccc">
+</div>
+
 
 <input id="showBtn" type="button" value="显示">
 <input id="hiddenBtn" type="button" value="隐藏">
